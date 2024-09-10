@@ -1,6 +1,6 @@
 cipher:
 	gcc -o ../build/cipher cipher.c
 
-clear:
+clean:
 	rm *.o
 	rm ../build/*

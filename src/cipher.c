@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void print_menu() {
-    printf("Меню:\n");
-    printf("1. Указать путь к текстовому файлу для его открытия и чтения\n");
-    printf("-1. Выход из программы\n");
-}
+// void print_menu() {
+//     printf("Меню:\n");
+//     printf("1. Указать путь к текстовому файлу для его открытия и чтения\n");
+//     printf("-1. Выход из программы\n");
+// }
 
 void read_file(const char *path) {
     FILE *file = fopen(path, "r");
@@ -33,8 +33,8 @@ int main() {
     char path[256];
 
     while (1) {
-        print_menu();
-        printf("Введите команду: ");
+        //print_menu();
+        //printf("Введите команду: ");
         if (scanf("%d", &choice) != 1) {
             printf("n/a\n");
             break;
@@ -43,7 +43,7 @@ int main() {
         if (choice == -1) {
             break;
         } else if (choice == 1) {
-            printf("Введите путь к файлу: ");
+            //printf("Введите путь к файлу: ");
             scanf("%s", path);
             read_file(path);
         } else {
